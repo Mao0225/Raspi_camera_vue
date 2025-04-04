@@ -7,7 +7,7 @@
           <el-card>
             <!-- 头像和昵称部分 -->
             <div class="relative w-100px h-100px flex-center">
-              <el-avatar :src="userProfile.avatar" :size="100" />
+              <el-avatar :src="`http://39.98.221.201:8989${userProfile.avatar}`" :size="100" />
               <el-button
                 type="info"
                 class="absolute bottom-0 right-0 cursor-pointer"

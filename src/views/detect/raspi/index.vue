@@ -67,6 +67,15 @@
         />
 
         <el-table-column label="部门" width="120" align="center" prop="deptName" />
+
+        <el-table-column label="SSH终端链接" width="120" align="center" prop="terminalLink" />
+
+        <el-table-column label="VNC桌面链接" width="120" align="center" prop="desktopLink" />
+
+        <el-table-column label="用户名" width="120" align="center" prop="username" />
+
+        <el-table-column label="密码" width="120" align="center" prop="password" />
+
         <el-table-column
           key="location"
           label="放置地点"
@@ -169,6 +178,22 @@
             check-strictly
             :render-after-expand="false"
           />
+        </el-form-item>
+
+        <el-form-item label="SSH终端链接" prop="terminalLink">
+          <el-input v-model="formData.terminalLink" placeholder="SSH终端链接" />
+        </el-form-item>
+
+        <el-form-item label="VNC桌面链接" prop="destopLink">
+          <el-input v-model="formData.desktopLink" placeholder="VNC桌面链接" />
+        </el-form-item>
+
+        <el-form-item label="用户名" prop="username">
+          <el-input v-model="formData.username" placeholder="用户名" />
+        </el-form-item>
+
+        <el-form-item label="密码" prop="password">
+          <el-input v-model="formData.password" placeholder="密码" />
         </el-form-item>
 
         <el-form-item label="放置地点" prop="location">

@@ -277,6 +277,7 @@ function handleSelectionChange(selection: any) {
 }
 
 /** 打开摄像头抓拍记录弹窗 */
+// eslint-disable-next-line no-unused-vars
 function handleOpenDialog(id?: number) {
   dialog.visible = true;
   if (id) {
@@ -325,6 +326,7 @@ function handleCloseDialog() {
 }
 
 /** 删除摄像头抓拍记录 */
+// eslint-disable-next-line no-unused-vars
 function handleDelete(id?: number) {
   const ids = [id || removeIds.value].join(",");
   if (!ids) {

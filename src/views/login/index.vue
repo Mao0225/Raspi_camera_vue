@@ -19,7 +19,7 @@
       <el-form ref="loginFormRef" :model="loginFormData" :rules="loginRules">
         <div class="form-title">
           <h2>{{ defaultSettings.title }}</h2>
-          <el-dropdown style="position: absolute; right: 0">
+          <!-- <el-dropdown style="position: absolute; right: 0">
             <div class="cursor-pointer">
               <el-icon>
                 <arrow-down />
@@ -41,7 +41,7 @@
                 </el-dropdown-item>
               </el-dropdown-menu>
             </template>
-          </el-dropdown>
+          </el-dropdown> -->
         </div>
 
         <!-- 用户名 -->
@@ -106,9 +106,9 @@
             {{ $t("login.rememberMe") }}
           </el-checkbox>
 
-          <el-link type="primary" href="/forget-password">
+          <!-- <el-link type="primary" href="/forget-password">
             {{ $t("login.forgetPassword") }}
-          </el-link>
+          </el-link> -->
         </div>
 
         <!-- 登录按钮 -->
@@ -123,7 +123,7 @@
         </el-button>
 
         <!-- 第三方登录 -->
-        <el-divider>
+        <!-- <el-divider>
           <el-text size="small">{{ $t("login.otherLoginMethods") }}</el-text>
         </el-divider>
         <div class="third-party-login">
@@ -131,17 +131,17 @@
           <div class="i-svg:qq" />
           <div class="i-svg:github" />
           <div class="i-svg:gitee" />
-        </div>
+        </div> -->
       </el-form>
     </div>
 
     <!-- 登录页底部 -->
-    <div class="login-footer">
+    <!-- <div class="login-footer">
       <el-text size="small">
         Copyright © 2021 - 2025 youlai.tech All Rights Reserved.
         <a href="http://beian.miit.gov.cn/" target="_blank">皖ICP备20006496号-2</a>
       </el-text>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -172,8 +172,8 @@ const isCapslock = ref(false); // 是否大写锁定
 const captchaBase64 = ref(); // 验证码图片Base64字符串
 
 const loginFormData = ref<LoginFormData>({
-  username: "admin",
-  password: "123456",
+  username: "",
+  password: "",
   captchaKey: "",
   captchaCode: "",
 });
@@ -282,11 +282,11 @@ function checkCapslock(event: KeyboardEvent) {
   }
 }
 
-// 设置登录凭证
-const setLoginCredentials = (username: string, password: string) => {
-  loginFormData.value.username = username;
-  loginFormData.value.password = password;
-};
+// // 设置登录凭证
+// const setLoginCredentials = (username: string, password: string) => {
+//   loginFormData.value.username = username;
+//   loginFormData.value.password = password;
+// };
 
 onMounted(() => {
   getCaptcha();

@@ -88,6 +88,14 @@ export interface RaspiForm {
   deptId?: number;
   /** 放置地点 */
   location?: string;
+  /** 终端链接 */
+  terminalLink?: string;
+  /** 桌面链接 */
+  desktopLink?: string;
+  /** 用户名 */
+  username?: string;
+  /** 密码 */
+  password?: string;
   /** 上传间隔时间(秒) */
   uploadInterval?: number;
   /** 报警词汇 */
@@ -106,6 +114,14 @@ export interface RaspiPageVO {
   deptName?: string;
   /** 放置地点 */
   location?: string;
+  /** 终端链接 */
+  terminalLink?: string;
+  /** 桌面链接 */
+  desktopLink?: string;
+  /** 用户名 */
+  username?: string;
+  /** 密码 */
+  password?: string;
   /** 上传间隔时间(秒) */
   uploadInterval?: number;
   /** 报警词汇 */
