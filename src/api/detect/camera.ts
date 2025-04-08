@@ -23,6 +23,18 @@ const CameraAPI = {
       method: "get",
     });
   },
+  /**
+   * 获取摄像头预览数据
+   *
+   * @param raspiId 树莓派Id
+   * @returns 获取摄像头预览数据
+   */
+  getPreviewData(raspiId: number) {
+    return request<any, CameraPreviewVO>({
+      url: `${CAMERA_BASE_URL}/preview/${raspiId}`,
+      method: "get",
+    });
+  },
 
   /** 添加摄像头设备管理*/
   add(data: CameraForm) {
@@ -77,6 +89,28 @@ export interface CameraForm {
   raspberryPiId?: number;
   /** 放置地点 */
   location?: string;
+}
+
+/** 摄像头视频预览对象 */
+export interface CameraPreviewVO {
+  /** 设备编号 */
+  deviceNumber?: string;
+  /** 视频流地址 */
+  videoUrl?: string;
+  /** 湿度 */
+  wet?: string;
+  /** 温度 */
+  tem?: string;
+  /** 照片描述信息 */
+  info?: string;
+  /** 烟雾浓度 */
+  smoke?: string;
+  /** 图片存储路径 */
+  imagePath?: string;
+  /** 抓取时间 */
+  grabTime?: Date;
+  /** 识别出来的目标列表 */
+  detectInfo?: string;
 }
 
 /** 摄像头设备管理分页对象 */
