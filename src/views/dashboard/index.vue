@@ -9,8 +9,9 @@
           <div class="flex-x-start">
             <img
               class="w80px h80px rounded-full"
-              :src="userStore.userInfo.avatar + '?imageView2/1/w/80/h/80'"
+              :src="`http://39.98.221.201:8989${userStore.userInfo.avatar}`"
             />
+
             <div class="ml-5">
               <p>{{ greetings }}</p>
               <p class="text-sm text-gray">今日天气晴朗，气温在15℃至25℃之间，东南风。</p>

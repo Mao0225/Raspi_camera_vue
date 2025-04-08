@@ -217,7 +217,9 @@ import {
   Timer,
   Aim,
   WindPower,
+  // eslint-disable-next-line no-unused-vars
   VideoPause,
+  // eslint-disable-next-line no-unused-vars
   VideoPlay,
   Connection,
   Refresh,
@@ -350,15 +352,6 @@ const loadRaspiOptions = async () => {
     ElMessage.error("获取树莓派选项失败");
   } finally {
     loadingRaspi.value = false;
-  }
-};
-
-// 刷新数据
-const refreshData = () => {
-  if (selectedRaspi.value !== null) {
-    fetchCameraData(selectedRaspi.value);
-  } else {
-    ElMessage.warning("请先选择树莓派设备");
   }
 };
 

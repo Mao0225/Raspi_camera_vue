@@ -21,7 +21,10 @@
     <!-- 用户头像（个人中心、注销登录等） -->
     <el-dropdown trigger="click">
       <div class="user-profile">
-        <img class="user-profile__avatar" :src="userStore.userInfo.avatar" />
+        <img
+          class="user-profile__avatar"
+          :src="`http://39.98.221.201:8989${userStore.userInfo.avatar}`"
+        />
         <span class="user-profile__name">{{ userStore.userInfo.username }}</span>
       </div>
       <template #dropdown>
